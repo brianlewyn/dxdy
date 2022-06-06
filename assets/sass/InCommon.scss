@@ -1,18 +1,19 @@
 /* Style css In Commen */
-
-/* html:Body */
-body {
-   font-family: 'Raleway', sans-serif;
-   height: 100vh;
-}
-
 /* sass:files */
 @import "Reset-Bs.scss";
 
-/* google:Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gabriela&display=swap');
+/* googleFiles:Fonts */
+@font-face { font-family: 'Raleway-R'; src: url('../fonts/Raleway/Regular.ttf'); }
+@font-face { font-family: 'Raleway-M'; src: url('../fonts/Raleway/Medium.ttf'); }
+@font-face { font-family: 'Raleway-SB'; src: url('../fonts/Raleway/SemiBold.ttf'); }
+@font-face { font-family: 'Gabriela'; src: url('../fonts/Gabriela/Regular.ttf'); }
+@font-face { font-family: 'Poppins'; src: url('../fonts/Poppins/Regular.ttf'); }
+
+/* html:Body */
+body {
+   font-family: 'Raleway-R', sans-serif;
+   height: 100vh;
+}
 
 /* API Js FullScreen */
 #FullScreen {
@@ -29,13 +30,11 @@ body {
    border: none;
    outline: none;
 
-   i.bx { font-size: 28px !important; }
    &:hover { background-color: #00bbab !important; }
 }
 
-/* html:Header */
-header nav a i.bx-x { transform: scale(1.4); }
-
-.Raleway { font-family: 'Raleway', sans-serif !important; }
+.Raleway-R { font-family: 'Raleway-R', sans-serif !important; }
+.Raleway-M { font-family: 'Raleway-M', sans-serif !important; }
+.Raleway-SB { font-family: 'Raleway-SB', sans-serif !important; }
 .Poppins { font-family: 'Poppins', sans-serif !important; }
 .Gabriela { font-family: 'Gabriela', sans-serif !important; }

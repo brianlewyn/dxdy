@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AACA,AAAA,QAAQ,AAAC,CAAE,KAAK,CAAE,KAAK,CAAI,AAC3B,AAAA,QAAQ,AAAC,CAAE,KAAK,CAAE,KAAK,CAAI,AAE3B,MAAM,EAAE,SAAS,EAAE,KAAK,EACrB,AAAA,SAAS,AAAC,CAAE,WAAW,CAAE,eAAe,CAAE,cAAc,CAAE,eAAe,CAAI",
     "sources": [
         "../sass/Logic.scss"
     ],
