@@ -15,6 +15,11 @@ body {
    height: 100vh;
 }
 
+/* NohtmlScrollbar */
+::-webkit-scrollbar { width: 0.5rem; }
+::-webkit-scrollbar-track { background: hsl(0, 0%, 32%); }
+::-webkit-scrollbar-thumb { background: #03D2C0; }
+
 /* API Js FullScreen */
 #FullScreen {
    display: flex;
