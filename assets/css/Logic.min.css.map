@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/Logic.scss"
+    ],
+    "names": [],
+    "file": "Logic.min.css"
+}

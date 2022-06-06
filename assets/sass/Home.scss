@@ -1,0 +1,89 @@
+/* TheRecharge:Loader*/
+div#Loader {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 20px;
+
+	position: fixed;
+   top: 0;
+   left: 0;
+	top: -100vh;
+	left: -100vw;
+
+   height: 100vh;
+   width: 100vw;
+	background: linear-gradient(
+      167.95deg, 
+      #03DAC6 56.09%, 
+      #018786 98.78%
+   );
+	z-index: 1050;
+   overflow: hidden;
+	animation: Loader 3.0s normal ease-in;
+}
+@keyframes Loader {
+	0% { transform: translate(100vw, 100vh); }
+	80% { transform: translate(100vw, 100vh); opacity: 1; }
+	90% { transform: translate(100vw, 100vh); opacity: .5; }
+	99% { transform: translate(100vw, 100vh); opacity: .05; }
+	100% { transform: translate(-100vw, -100vh); opacity: 0; }
+}
+
+div#Loader #Branch {
+   &, img {
+      transform: translateY(-10px);
+   }
+   g#Leave1 { 
+      opacity: 0; 
+      animation: Leave 3s normal ease-in; 
+      animation-delay: 0s; 
+   }
+   g#Leave2 { 
+      opacity: 0; 
+      animation: Leave 2.3s normal ease-in; 
+      animation-delay: 0.7s; 
+   }
+   g#Leave3 { 
+      opacity: 0; 
+      animation: Leave 1.6s normal ease-in; 
+      animation-delay: 1.4s; 
+   }
+}
+@keyframes Leave {
+   from { opacity: 0; }
+   to { opacity: 1; }
+}
+
+/* html:Main */
+main {
+   nav.Grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 200px 180px 180px;
+      grid-template-areas: 
+         "A A"
+         "B C"
+         "D E";
+      column-gap: 14px;
+      row-gap: 14px;
+   }
+
+   a {
+      padding: 2px !important;
+   
+      &.Item-A { grid-area: A; }
+      &.Item-B { grid-area: B; }
+      &.Item-C { grid-area: C; }
+      &.Item-D { grid-area: D; }
+      &.Item-E { grid-area: E; }
+
+      div.Btn-FlexBox {
+         display: flex;
+         justify-content: space-around;
+      }
+   }
+
+   div.Ghost-Footer { height: 70px; width: 100%;}
+}

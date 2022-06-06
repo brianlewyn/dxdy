@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/Goals.scss"
+    ],
+    "names": [],
+    "file": "Goals.min.css"
+}

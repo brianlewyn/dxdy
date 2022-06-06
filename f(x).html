@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Icono File -->
+   <link rel="shortchut icon" type="image/x-icon" href="assets/img/brianlewyn.ico">
+   <!-- Boostrap File -->
+   <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+   <!-- CSS File -->
+   <link rel="stylesheet" href="assets/css/InCommon.min.css">
+   <link rel="stylesheet" href="assets/css/f(x).min.css">
+   <title>BrianLewyn · f(x)</title>
+
+</head>
+<body class="bg-body">
+
+   <header>
+      <nav class="navbar pt-3 px-3 pb-0">
+         <span class="fw-semibold h1 text-dark m-0 p-0" 
+            aria-label="Title:Derivatives">
+            Derivatives
+         </span>
+         <a class="navbar-brand h1 m-0 p-0 link-secondary" 
+            href="./" aria-label="Click:Close">
+            <img src="assets/img/boxicons/bx-x-xl.svg" alt="bx-x">
+         </a>
+      </nav>
+   </header>
+
+   <main class="fw-regular px-3 pt-3">
+   
+      <form id="Request" class="row Poppins px-0 pt-2 pt-lg-4 gap-4 fs-5">
+      
+         <div id="Answer-du">
+            <span class="Gabriela">f'</span>(<input id="z" 
+            class="text-dark text-center p-0 m-0 bg-transparent border-0" 
+            value="x" required>) = <input id="dz" 
+            class="text-dark text-start p-0 m-0 bg-transparent border-0" 
+            value="knx^(n-1) + nx^(n-1) + k - 1" required>
+         </div>
+      
+         <div id="Problem-du">
+            <span class='Gabriela'>f</span>
+            (<input id="X"
+            class="text-dark text-center p-0 m-0 bg-transparent border-0 border-bottom border-dark rounded-0" placeholder="x" required>) = 
+            <input id="Y" 
+            class="text-dark text-start p-0 m-0 bg-transparent border-0 border-bottom border-dark rounded-0" placeholder="kx^n + x^n + kx - x" required>
+         </div>
+
+         <div id="Actions" class="d-flex gap-3">
+            <button 
+               type="reset" id="R" 
+               class="btn bg-primary text-dark border-0 shadow fs-5" aria-label="Btn:Reset">
+               Reset
+            </button>
+            <button 
+               type="button" id="S" 
+               class="btn bg-secondary text-dark border-0 shadow fs-5" aria-label="Btn:Send">
+               Send
+            </button>
+            <button
+               type="button" id="Bookmark" class="btn bg-transparent text-dark d-flex align-items-center justify-content-center border-0 p-0" aria-label="Btn:bx-bookmark" disabled>
+            <img src="assets/img/boxicons/bx-bookmark-xl.svg" alt="bx-bookmark">
+            </button>
+            <button
+               type="button" id="Heart" class="btn bg-transparent text-dark d-flex align-items-center justify-content-center border-0 p-0" aria-label="Btn:bx-heart" disabled>
+               <img src="assets/img/boxicons/bx-heart-xl.svg" alt="bx-bookmark">
+            </button>
+         </div>
+      
+      </form>
+
+      <div id="Note" class="d-flex justify-content-center flex-column align-items-center gap-4
+         position-relative flex-lg-row justify-content-lg-around">
+      
+         <div id="Note_Box" class="bg-primary rounded-3 mt-4 px-3 pt-2 fs-6 shadow">
+            <b class="fs-5 mb-1">Note:</b>
+            <ul>
+               <li>The app does not do integrals.</li>
+               <li>The limit is: <var>d(ax^n +bx + c)^m</var>.</li>
+               <li>The app is still in process.</li>
+            </ul>
+         </div>
+      
+         <div id="Note_Img" class="">
+            <img src="assets/img/InTheOffice.svg" alt="Img:InTheOffice">
+         </div>
+      
+      </div>
+      
+   </main>
+
+   <button id="FullScreen"></button>
+
+   <!-- JS File -->
+   <script src="assets/js/FullScreen.js"></script>
+   <script src="assets/js/AllLogic.js"></script>
+   <script src="assets/js/SpreadSheet.js"></script>
+
+</body>
+</html>

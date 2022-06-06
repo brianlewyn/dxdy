@@ -1,0 +1,30 @@
+/* html:Main */
+main {
+   form#Request {
+      input#X, input#z { width: 25px !important; }
+      input#Y, input#dz { width: calc(100% - calc(24px + 25px + 30px + 2vw)) !important; }
+      input:focus { outline: 0; }
+
+      button#Bookmark, button#Heart { 
+         .bx { transform: scale(1.2); } 
+      }
+   }
+
+   div#Note {
+      div#Note_Box {
+         box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.3);
+      }
+   }
+}
+
+/* Media query → lg */
+@media (min-width: 991.98px) {
+   div#Note_Box {
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+   div#Note_Img {
+      transform: translateY(10%) scale(1.3);
+   }
+}
