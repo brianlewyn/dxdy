@@ -10,7 +10,7 @@
    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
    <!-- CSS File -->
    <link rel="stylesheet" href="assets/css/InCommon.min.css">
-   <!-- <link rel="stylesheet" href="assets/css/Home.min.css"> -->
+   <link rel="stylesheet" href="assets/css/Development.min.css">
    <title>BrianLewyn · Development</title>
 
 </head>
@@ -28,6 +28,85 @@
          </a>
       </nav>
    </header>
+
+   <main>
+      <div class="container fs-5 py-4">
+         <section class="py-4 py-md-11">
+            <div class="container">
+               <div class="row">
+                  <div class="col-12 col-md-7 col-lg-6 py-4">
+                     <h1 class="display-5 text-center text-md-start">
+                        Welcome to <span class="text-primary">dxdy</span>
+                     </h1>
+                     <p class="lead text-center text-md-start text-muted mb-6 mb-lg-8">
+                        dxdy is a Web App that does simple derivatives.
+                     </p>
+                     <div class="text-center text-md-start">
+                        <a href="#More" class="btn btn-primary shadow">Read more</a>
+                     </div>
+                  </div>
+                  <div class="col-12 col-md-5 col-lg-6 py-4">
+                     <img src="assets/img/Development/Software.svg" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="">
+                  </div>
+               </div>
+            </div>
+         </section>
+         <br>
+         <section>
+            <h2>¿Qué tan desarrollado esta el programa que reliza derivadas?</h2>
+            <div class="container">
+               <div class="row">
+                  <div class="col-12 col-md-5 col-lg-4 py-4">
+                     <img src="assets/img/Development/Programming.svg" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="Programming">
+                  </div>
+                  <div class="col-12 col-md-7 col-lg-8 py-4">
+                     <p>
+                        El programa que reliza derivadas está escrito tanto para JavaScript como en Golang. Se podría decir que el programa aun sigue en modo beta, ya que aún esta suscetible a errores, pero son errores que pueden ser mejorados para más adelante. <br><br>
+
+                        El programa que calcula las derivadas tiene una licencia del tipo "GNU Affero General Public License v3.0", por lo tanto, cualquier persona tiene acceso y puede usar el código, siempre y cuando respete lo dictado en la licencia, en el cual explica que si haces uso de el, debes aportar tu desarrollado para mejorar el software. Por el momento, solo esta accesible el código de Golang a través del paquete <a href="https://github.com/BrianLewyn/dy" class="link-primary">github.com/BrianLewyn/dy</a>. <br><br>
+                     </p>
+                  </div>
+                  <div>
+                     <p>El paquete <span class="text-primary">BrianLewyn/dy</span> está diseñado para programadores que tienen que trabajar con derivadas matemáticas.
+                        <br><br>
+                        Es por eso que este paquete brinda funciones que nos permiten calcular derivadas de una o más expresiones matemáticas de una manera más fácil y organizada.<br><br>
+                        
+                        El objetivo es que a partir de una cadena de texto que contiene expresiones matemáticas con o sin literales, las funciones del paquete puedan devolver el resultado con el mismo tipo de datos.<br><br>
+
+                        Tanto en JS como GO, tienen la funciones con la características siguientes:
+                     </p>
+                     <ul>
+                        <li><b>AddKxn()</b>
+                           <ul>
+                              <li>Suma todas las expresiones kx^n siempre que tenga el mismo literal x y exponente n.</li>
+                              <li>No hay límite en el número de expresiones a calcular.</li>
+                              <li>Se pueden ingresar valores enteros o flotantes tanto para la constante k como para el exponente n.</li>
+                              <li>Si usa flotantes, el valor tendrá una precisión de dos decimales, pero esto se puede cambiar.</li>
+                              <li>Puedes trabajar con cualquier literal con tantas letras como quieras.</li>
+                              <li>Ordena las expresiones kx^n de mayor a menor exponente.</li>
+                              <li>Los signos positivo y negativo se tienen en cuenta al sumar.</li>
+                              <li>Entre cada expresión matemática puedes poner un espacio x+x o un espacio, un signo y otro espacio x+x.</li>
+                              <li>Si al comienzo de la cadena, una expresión es negativa, el signo menos se coloca como está. Pero si es positivo, se puede poner el signo, el signo y un espacio, o simplemente nada.</li>
+                              <li>No importa cómo ingrese kx^n, siempre que sea una expresión, el programa se encargará de inferir y reconstruir las expresiones a su forma base para realizar la operación correcta.</li>
+                              <li>Todas las expresiones matemáticas que tienen constante 1, exponente 1 o 0, se representarán en su forma más compacta y clara.</li>
+                           </ul>
+                        </li>
+                        <br>
+                        <li><b>DyKxn()</b>
+                           <ul>
+                              <li>Mantiene todas las características anteriores.</li>
+                              <li>Para cada expresión ejecuta la regla de la derivada de kx^n.</li>
+                              <li>En el posible caso que defina el literal en mayúsculas y todas las expresiones en minúsculas o viceversa, el programa siempre pondrá todos los literales en minúsculas.</li>
+                              <li><strong>Nota:</strong>Si todas las expresiones se escribieron exactamente con la misma literal y no hay otro tipo de error todo saldrá bien, pero de lo contrario, se arroja un error como si hubiera un literal constante.</li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+   </main>
 
    <button id="FullScreen"></button>
 
