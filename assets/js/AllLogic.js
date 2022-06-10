@@ -3,7 +3,7 @@
 
 // Round to two decimals.
 var Zero = '.00'
-function twoRound(n) {
+const twoRound = function (n) {
    return +(Math.round(n + "e+2") + "e-2");
 }
 
@@ -50,7 +50,7 @@ const knxm = function (g) {
 // * My JS Module: 01
 
 // Check in there is any empty input field.
-function existsXY(w, g) {   
+const existsXY = function (w, g) {   
    if (w === '' && g === '') {
       return 'Fill in both input fields.'
    } else if (w === '' && g !== '') {
@@ -63,7 +63,7 @@ function existsXY(w, g) {
 }
 
 // Convert all literals to the same.
-function lowercaseXY(w, g) {
+const lowercaseXY = function (w, g) {
    let [upper, lower] = [w.toUpperCase(), w.toLowerCase()]
    if (w === upper) {
       if (!g.includes(upper) && g.includes(lower)) {
@@ -79,7 +79,7 @@ function lowercaseXY(w, g) {
 }
 
 // In a str, find a set of strs and replace them with another.
-function replaceStrY(g, another, slice) {
+const replaceStrY = function (g, another, slice) {
    slice.forEach(sgn => {
       if (g.includes(sgn)) {
          g = g.replaceAll(sgn, another)
@@ -89,7 +89,7 @@ function replaceStrY(g, another, slice) {
 }
 
 // Verify if the math func was written correctly.
-function correctlyXY(w, g) {
+const correctlyXY = function (w, g) {
 
    // Convert all literals to the same.
    g = lowercaseXY(w, g)
@@ -127,7 +127,7 @@ function correctlyXY(w, g) {
 }
 
 // Remove blank spaces between a sign and a number.
-function directSign(g) {
+const directSign = function(g) {
 	let sSign = ['+', '-']
    sSign.forEach(sgn => {
       if (g.includes(sgn+' ')) {
@@ -138,7 +138,7 @@ function directSign(g) {
 }
 
 // Split str type math func into Kx^n expression.
-function splitY(g) {
+const splitY = function (g) {
    // '+ n' => '+n'
    g = directSign(g)
 
@@ -151,7 +151,7 @@ function splitY(g) {
 }
 
 // Finish building kxn for future operations.
-function finishBuildingKxn(w, kxn) {
+const finishBuildingKxn = function (w, kxn) {
 	if (!kxn.includes(w+'^')) {
 		kxn = kxn.replaceAll(w, w+'^1')
 
@@ -173,7 +173,7 @@ function finishBuildingKxn(w, kxn) {
 }
 
 // kx^n → (kn)x^(n-1). For a single expression.
-function theKxnRule(w, kxn) {
+const theKxnRule = function(w, kxn) {
 
 	// All x or kx => kx^1
 	kxn = finishBuildingKxn(w, kxn)
@@ -197,7 +197,7 @@ function theKxnRule(w, kxn) {
 }
 
 // Add blank spaces between a sign and a number.
-function redirectSign(kxn) {
+const redirectSign = function (kxn) {
 	// For all kxn other that "".
 	if (kxn !== '') {
 
@@ -280,7 +280,7 @@ function DyKxn(w, g) {
 // * My GO Module: 02
 
 // Store K and N in different sets.
-function kSetNset(w, sKxn) {
+const kSetNset = function (w, sKxn) {
    for (let i in sKxn) {
       sKxn[i] = finishBuildingKxn(w, sKxn[i])
 	}
@@ -307,7 +307,7 @@ function kSetNset(w, sKxn) {
 }
 
 // Numbers from highest to lowest.
-function highToLowNum(s) {
+const highToLowNum = function (s) {
 	var temp = 0
 	for (let x in s) {
 		for (let y in s) {
@@ -322,7 +322,7 @@ function highToLowNum(s) {
 }
 
 // Remove all duplicate n in Y.
-function rmDuplicateN(slice) {
+const rmDuplicateN = function (slice) {
    return highToLowNum([...new Set(slice)])
 }
 
@@ -359,7 +359,7 @@ function addKs(sN, ssFlt) {
 }
 
 // Rebuild all the kxn, after having added them with their corresponding.
-function rebuildAllKxn(w, sskn) {
+const rebuildAllKxn = function(w, sskn) {
 
 	var sknStr = ''
 	for (let i in sskn) {
